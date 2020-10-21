@@ -42,9 +42,9 @@ class FloatingAction extends Component {
     );
     this.actionsBottomAnimation = new Animated.Value(
       props.buttonSize +
-        this.distanceToVerticalEdge +
-        props.actionsPaddingTopBottom +
-        props.mainVerticalDistance
+      this.distanceToVerticalEdge +
+      props.actionsPaddingTopBottom +
+      props.mainVerticalDistance
     );
     this.animation = new Animated.Value(0);
     this.actionsAnimation = new Animated.Value(0);
@@ -208,7 +208,7 @@ class FloatingAction extends Component {
       );
     }
 
-    return <AddIcon width={iconWidth} height={iconHeight} backgroundColor={iconColor}  />;
+    return <AddIcon width={iconWidth} height={iconHeight} backgroundColor={iconColor} />;
   };
 
   reset = () => {
@@ -427,7 +427,8 @@ class FloatingAction extends Component {
           styles[`${position}Button`],
           propStyles,
           animatedVisibleView,
-          this.getShadow()
+          this.getShadow(),
+          this.props.styleButton
         ]}
         accessible
         accessibilityLabel="Floating Action Button"
